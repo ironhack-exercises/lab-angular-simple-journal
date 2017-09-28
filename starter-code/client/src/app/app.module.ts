@@ -5,20 +5,22 @@ import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component'
 import { EntryListComponent } from './entry-list/entry-list.component'
+import { SingleEntryComponent } from './single-entry/single-entry.component'
 
 import { JournalService } from './services/journal.service'
 
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router"
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home',  component: EntryListComponent },
+  { path: '', component: EntryListComponent },
+  { path: ':id',  component: SingleEntryComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,

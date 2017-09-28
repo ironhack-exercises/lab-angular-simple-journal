@@ -1,4 +1,5 @@
 <div *ngFor='let entry of entryList'>
   <h2>{{entry.title}}</h2>
   <p>{{entry.date}}</p>
+  <a [routerLink]='["", entry._id]'> Detail </a>
 </div>

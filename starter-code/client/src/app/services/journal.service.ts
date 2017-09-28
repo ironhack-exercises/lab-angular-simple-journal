@@ -13,4 +13,9 @@ export class JournalService {
     return this.http.get(`${this.BASE_URL}/api/journal-entries`)
       .map((res) => res.json())
   }
+
+  getJournalEntry(id) {
+    return this.http.get(`${this.BASE_URL}/api/journal-entries/${id}`)
+      .map((res) => res.json())
+  }
 }
